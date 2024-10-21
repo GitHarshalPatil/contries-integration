@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Light Theme */
+.light {
+  background-color: #f9f9f9;
+  color: #111;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.light .navbar {
+  background-color: #fff;
+  color: #111;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.light button {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Dark Theme */
+.dark {
+  background-color: #202c37;
+  color: #f9f9f9;
+}
+
+.dark .navbar {
+  background-color: #2b3945;
+  color: #f9f9f9;
+}
+
+.dark button {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+/* Additional styling for the navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem 2rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button styles */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }

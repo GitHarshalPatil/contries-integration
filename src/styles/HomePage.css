@@ -1,0 +1,88 @@
+/* Style for the container holding all country cards */
+.countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center the cards horizontally */
+    gap: 2rem;
+    /* Space between the cards */
+    padding: 2rem;
+}
+
+/* Style for individual country cards */
+.country-card {
+    background-color: var(--card-background);
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    /* Set a max width for the card */
+    height: 400px;
+    /* Set a fixed height for the card */
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.country-card img {
+    width: 100%;
+    /* Make the flag image fill the width */
+    height: 150px;
+    /* Control the height of the flag */
+    object-fit: cover;
+    /* Ensure the image covers the space properly */
+}
+
+.country-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.country-card p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    /* Hover effect to lift the card slightly */
+}
+
+/* Search and filter area styling */
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+
+    /* Responsive design for smaller screens */
+    .country-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-filter input,
+    .search-filter select {
+        width: 100%;
+    }
+}

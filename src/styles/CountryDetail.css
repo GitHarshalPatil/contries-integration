@@ -1,0 +1,31 @@
+.country-details {
+    padding: 2rem;
+    text-align: left;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2b3945;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.country-details img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.country-details p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.country-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
