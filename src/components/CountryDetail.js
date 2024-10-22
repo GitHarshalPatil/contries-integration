@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/CountryDetail.css';  // Add CSS for the details page
+import '../styles/CountryDetail.css';
 
 const CountryDetails = () => {
-    const { name } = useParams(); // Get the country name from the URL
+    const { name } = useParams();
     const [country, setCountry] = useState(null);
 
     useEffect(() => {
         axios.get(`https://restcountries.com/v3.1/name/${name}`)
             .then(response => {
-                setCountry(response.data[0]); // Get the first matching country
+                setCountry(response.data[0]);
             })
             .catch(error => console.error('Error fetching country details:', error));
     }, [name]);

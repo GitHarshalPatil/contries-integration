@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/HomePage.css';  // Import component-specific styles
+import '../styles/HomePage.css';
 
 const HomePage = () => {
     const [countries, setCountries] = useState([]);
     const [search, setSearch] = useState('');
-    const [region, setRegion] = useState(''); // Filter by region
+    const [region, setRegion] = useState('');
 
     useEffect(() => {
-        // Fetch all countries from API
         axios.get('https://restcountries.com/v3.1/all')
             .then(response => {
                 setCountries(response.data);
@@ -30,7 +29,6 @@ const HomePage = () => {
         const countryRegion = country.region.toLowerCase();
         const searchTerm = search.toLowerCase();
 
-        // Prioritize exact match with the search term, but also allow partial matches
         const matchesSearch = (countryName === searchTerm && searchTerm === 'india') || countryName.includes(searchTerm);
         const matchesRegion = region ? countryRegion === region.toLowerCase() : true;
 

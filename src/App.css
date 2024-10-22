@@ -1,4 +1,3 @@
-/* Global Styles */
 body,
 html {
   margin: 0;
@@ -24,13 +23,13 @@ html {
 
 /* Dark Theme */
 .dark {
-  background-color: #202c37;
-  color: #f9f9f9;
+  background-color: black;
+  color: #f9f9f9 !important;
 }
 
 .dark .navbar {
   background-color: #2b3945;
-  color: #f9f9f9;
+  color: #f9f9f9 !important;
 }
 
 .dark button {
